@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd $(dirname ${0})
+
+. ./prep-env.sh
+
+exec python3 src/openmtc_gevent/backend_main.py -f config-backend.json "$@"
